@@ -1,0 +1,31 @@
+.navbar-collapse {
+	.navbar-nav {
+		>a {
+			color: bisque;
+			text-decoration: none;
+			width: 166px;
+			padding: .5rem .1rem;
+			&:hover {
+				color: darken($color: bisque, $amount: 15%)
+			}
+			&.active {
+				color: yellowgreen;
+				font-weight: bold;
+			}
+		}
+
+		.dropdown-menu {
+			> a {
+				color: blueviolet;
+				text-decoration: none;
+				&:hover {
+					color: lighten($color: blueviolet, $amount: 15%)
+				}
+				&.active {
+					color: yellowgreen;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

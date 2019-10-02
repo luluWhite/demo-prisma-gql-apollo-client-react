@@ -1,0 +1,22 @@
+# folder
+instructions/
+**/coverage
+**/build
+**/.idea
+**/.vscode
+**/public
+
+# files
+**/.env*
+**/dist
+**/package-lock.json
+**/node_modules
+**/*.log*
+**/yarn.lock
+**/*.txt
+**/test_add_Env_Back.py
+**/add_Env_Back.py
+**/addScriptToPackageJsonAndResolverToIndex.py
+**/.pnp
+**/.pnp.js
+**/.DS_Store

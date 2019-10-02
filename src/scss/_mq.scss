@@ -1,0 +1,10 @@
+@media all and (max-width: 992px) {
+    .navbar-collapse {
+        nav {
+            display: block;
+            > a {
+                display: block;
+            }
+        }
+    }
+}
