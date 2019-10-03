@@ -39,9 +39,9 @@ export const UPDATE_COURSE = gql`
     mutation UpdateCourse($data: CourseUpdateInput!, $where: CourseWhereUniqueInput!) {
         updateCourse(data: $data, where: $where) {
             id
-            isPublished
             name
             description
+            isPublished
         }
     }
 `;
@@ -50,9 +50,9 @@ export const DELETE_COURSE = gql`
     mutation DeleteCourse($where: CourseWhereUniqueInput!) {
         deleteCourse(where: $where) {
             id
-            isPublished
             name
             description
+            isPublished
         }
     }
 `;

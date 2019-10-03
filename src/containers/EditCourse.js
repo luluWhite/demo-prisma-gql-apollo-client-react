@@ -34,7 +34,18 @@ const EditCourse = ({
 
     const handleUcSubmit = async (updateCourse, e) => {
         e.preventDefault();
-        await updateCourse();
+        await updateCourse({
+            optimisticResponse: {
+                __typename: 'Mutation',
+                updateCourse: {
+                    id: match.params.id,
+                    description: ucForm.description,
+                    name: ucForm.name,
+                    isPublished: true,
+                    __typename: 'Course'
+                }
+            }
+        });
     }
 
     return (

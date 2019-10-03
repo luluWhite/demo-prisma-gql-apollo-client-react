@@ -113,6 +113,15 @@ const CreateCourse = ({
                                         await createCourse({
                                             variables: {
                                                 data: { ...ccForm }
+                                            },
+                                            optimisticResponse: {
+                                                __typename: 'Mutation',
+                                                createCourse: {
+                                                    description: ccForm.description,
+                                                    name: ccForm.name,
+                                                    isPublished: ccForm.isPublished,
+                                                    __typename: 'Course'
+                                                }
                                             }
                                         })
                                     }}

@@ -35,7 +35,7 @@ const SearchCourses = ({
             ...courseLoading,
             isLoading: true
         });
-        const {data} = await client.query({
+        const { data } = await client.query({
             query: SEARCH_COURSES,
             variables: {
                 filter: scFormValue
