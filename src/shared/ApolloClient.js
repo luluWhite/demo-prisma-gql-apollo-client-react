@@ -15,10 +15,11 @@ import { getOperationAST } from 'graphql';
 import { storageStr } from '../constants/storageConst';
 
 const httpLink = new HttpLink({
-	uri: 'http://localhost:4000', // local
-	// uri: 'https://us1.prisma.sh/john-doe-ff2866/demo-gqlprisma-server/dev', // heroku
-	// credentials: 'include' // if your backend is a different domain
-	credentials: 'same-origin' // if your backend server is the same domain
+	// uri: 'http://localhost:4000', // local
+	// uri: 'https://us1.prisma.sh/john-doe-ff2866/demo-gqlprisma-server/dev', // prisma server
+	uri: 'https://first-prsima-gql-server.herokuapp.com/', // heroku
+	credentials: 'include' // if your backend is a different domain or deploy to heroku
+	// credentials: 'same-origin' // if your backend server is the same domain
 });
 
 const authMiddleware = new ApolloLink((operation, forward) => {
